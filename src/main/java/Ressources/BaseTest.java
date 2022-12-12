@@ -14,7 +14,7 @@ public class BaseTest {
 	
 	public static WebDriver driver;
 
-	public static WebDriver InitializeDriver() throws IOException {
+	public WebDriver InitializeDriver() throws IOException {
 
 		Properties prop = new Properties();
 		FileInputStream fil = new FileInputStream(System.getProperty("user.dir")

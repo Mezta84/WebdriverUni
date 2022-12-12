@@ -5,14 +5,21 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
+import Ressources.BaseTest;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class login {
+public class login extends BaseTest{
 
-	WebDriver driver = new ChromeDriver();
+	@Before
+	public WebDriver InitializeDriver() {
+		return driver;
+		
+	}
+	
 
 	@Given("I access Webdriver university LoginPage")
 	public void enterLoginPage() {
