@@ -1,5 +1,7 @@
 package StepDefinition;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,16 +16,10 @@ import io.cucumber.java.en.When;
 
 public class login extends BaseTest{
 
-	@Before
-	public WebDriver InitializeDriver() {
-		return driver;
-		
-	}
 	
-
 	@Given("I access Webdriver university LoginPage")
-	public void enterLoginPage() {
-		driver.get("http://www.webdriveruniversity.com/Login-Portal/index.html");
+	public void enterLoginPage() throws IOException {
+		EnterWebSite();
 	}
 
 	@When("^I enter a userName (.+)$")

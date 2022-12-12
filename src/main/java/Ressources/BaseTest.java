@@ -33,4 +33,9 @@ public class BaseTest {
 		driver.manage().window().maximize();
 		return driver;
 	}
+	
+	public void EnterWebSite() throws IOException {
+		InitializeDriver();
+		driver.get("http://www.webdriveruniversity.com/Login-Portal/index.html");
+	}
 }
